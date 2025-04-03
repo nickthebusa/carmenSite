@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <title>Services</title>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/century-gothic-paneuropean');
+  </style>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/adobe-garamond-pro-2');
+  </style>
+  <link href="./css/index.css" rel="stylesheet">
+  <link href="./css/hamburger.css" rel="stylesheet">
+  <link href="./css/contact.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+
+      <div class="logo-and-name">
+        <a href="index.html">
+          <img src="./pics/business_card_see_thru.webp" alt="business-logo, Carmen Sylvester Mobile Phlebotomist">
+        </a>
+      </div>
+
+      <div class="links">
+        <a href="services.html">SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="did_you_know.html">DID YOU KNOW</a>
+      </div>
+
+      <hamburger>
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div id="menu">
+          <a href="services.html">SERVICES</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="did_you_know.html">DID YOU KNOW</a>
+        </div>
+      </hamburger>
+
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Contact</h2>
+      <p>Thank you for visiting our website.</p>
+      <p>For further questions, please fill out the contact form below.</p>
+
+      <div class="contact-form-div">
+        <form method="POST" id="contact-form">
+          <fieldset>
+            <legend>Contact Form</legend>
+            <input type="hidden" name="access_key" value="f86dfd61-2f0b-465c-bb38-2c52a29036b4">
+
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input type="text" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input type="email" name="email" required placeholder="you@company.com">
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" name="phone" pattern="\+?[0-9\s\-]+" placeholder="(+1) 123-456-7890">
+            </div>
+            <div class="form-field">
+              <label for="message">Your Message</label>
+              <textarea rows="5" name="message" required placeholder="Your Message"></textarea>
+            </div>
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button type="submit">Submit Form</button>
+
+            <div id="result"></div>
+
+            <div class="loader-overlay">
+              <div class="loader"></div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1wiVTDzqe4GBbui-BIl7JslT2QELcam0&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <h3>Carmen Sylvester Mobile Phlebotomist</h3>
+    <span class="services">
+        <span>Mobile Blood Draws</span>
+        <span class="separator">•</span>
+        <span>In-Home Services</span>
+        <span class="separator">•</span>
+        <span>Specialty Lab Kits</span>
+    </span>
+    <span>508-737-4905</span>
+    <span>carmen.naturalhealth@gmail.com</span>
+    <div class="img-wrapper">
+      <img src="./pics/mp_logo.webp" alt="logo">
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

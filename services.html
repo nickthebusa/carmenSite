@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <title>Services</title>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/century-gothic-paneuropean');
+  </style>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/adobe-garamond-pro-2');
+  </style>
+  <link href="./css/index.css" rel="stylesheet">
+  <link href="./css/hamburger.css" rel="stylesheet">
+  <link href="./css/services.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+
+      <div class="logo-and-name">
+        <a href="index.html">
+          <img src="./pics/business_card_see_thru.webp" alt="business-logo, Carmen Sylvester Mobile Phlebotomist">
+        </a>
+      </div>
+
+      <div class="links">
+        <a href="services.html">SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="did_you_know.html">DID YOU KNOW</a>
+      </div>
+
+      <hamburger>
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div id="menu">
+          <a href="services.html">SERVICES</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="did_you_know.html">DID YOU KNOW</a>
+        </div>
+      </hamburger>
+
+    </div>
+  </nav>
+
+  <main>
+
+
+    <section>
+      <h2>Services</h2>
+
+      <div class="dropdown-div">
+        <input type="checkbox" id="dropdown" class="dropdown" name="dropdown">
+        <label for="dropdown" class="dropdown-label">
+            SELECT
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+        </label>
+        <div class="section-dropdown">
+          <span data-value="mobile-phlebotomy">mobile phlebotomy</span>
+          <span data-value="biofeedback-body-scan">biofeedback body scan</span>
+          <span data-value="mind-body-harmony">mind body harmony</span>
+        </div>
+      </div>
+
+      <div class="service selected" id="mobile-phlebotomy">
+        <p>
+          Our Mobile Phlebotomy Services will draw your blood in the convenience of your own house.
+          With our one stop solution, you’ll save valuable time. Our integrated approach streamlines the
+          process. We handle everything from start to finish, once you have received your kit from the
+          laboratory. Prices vary according to the request from the lab. The cost is determined by the
+          scope of the services provided and can change accordingly. Travel distance and time also factor
+          into this.
+        </p>
+        <div class="services img-wrapper">
+          <img src="./pics/mobile_phlebotomist_pic.webp" alt="mobile phlebotomist taking blood">
+        </div>
+      </div>
+      <div class="service" id="biofeedback-body-scan">
+        <p>
+          Biofeedback scan. Why do we offer this? We want you to feel good! Biofeedback devices let
+          your body choose what is impeding your health progress. The scan looks at toxic threats,
+          environment, food and stress to help determine what is threatening your well-being. You can
+          learn what is behind your symptoms and what you can do with your body to help get rid of it.
+          Once again we can bring the scan to you. It is done in the privacy of your own home. It is
+          conducted remotely. Once the scan is complete, you will receive a report of the findings and
+          then a holistic wellness plan is recommended. It may include diet suggestions, supplements and
+          lifestyle changes.
+        </p>
+        <div class="services img-wrapper">
+          <img src="./pics/biofeedback_testing_machine.webp" alt="biofeedback testing machine">
+        </div>
+      </div>
+      <div class="service" id="mind-body-harmony">
+        <p>
+          What is mind-body harmony? Align your physical health with your physical space. Make your
+          home your oasis. Free your mind and harmonize your physical space to your emotional well
+          being. This starts in your home. Do you want to move through the space in your home with
+          ease, locate items promptly when you need them, have more space, and not feel cluttered.
+          Statistics show that we spend billions on replacing items that we have lost. Your home is a place
+          that you want to come home to and unwind from work and all the other stresses from the
+          outside world. Make your home your sanctuary. Organization frees up a lot of time, puts your
+          mind at ease and allows you to have extra time for yourself and do the things you enjoy.
+          Consults are free. Book it today.
+        </p>
+        <div class="services img-wrapper">
+          <img src="./pics/yoga_tree.webp" alt="yoga meditation harmony">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Carmen Sylvester Mobile Phlebotomist</h3>
+    <span class="services">
+        <span>Mobile Blood Draws</span>
+        <span class="separator">•</span>
+        <span>In-Home Services</span>
+        <span class="separator">•</span>
+        <span>Specialty Lab Kits</span>
+    </span>
+    <span>508-737-4905</span>
+    <span>carmen.naturalhealth@gmail.com</span>
+    <div class="img-wrapper">
+      <img src="./pics/mp_logo.webp" alt="logo">
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+  <script src="./js/services.js"></script>
+</body>
+
+</html>
