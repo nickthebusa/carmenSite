@@ -6,7 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData(form);
-    const object = Object.fromEntries(formData);
+    const services = formData.getAll("services");
+    const object = Object.fromEntries(
+      [...formData].filter(([name]) => name !== "services")
+    );
+    object.services = services;
+    console.log(object);
     const json = JSON.stringify(object);
     result.innerHTML = "Please wait...";
     loader.style.display = "flex";
@@ -19,14 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
         'Accept': 'application/json'
       },
       body: json,
-      mode: 'CORS',
     })
       .then(async (response) => {
         let json = await response.json();
         loader.style.display = "none";
         form.disabled = false;
         if (response.status == 200) {
-          window.location.href = "success.html";
           result.innerHTML = "Form submitted successfully";
         } else {
           console.log(response);

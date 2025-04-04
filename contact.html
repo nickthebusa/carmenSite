@@ -77,6 +77,29 @@
               <input type="tel" name="phone" pattern="\+?[0-9\s\-]+" placeholder="(+1) 123-456-7890">
             </div>
             <div class="form-field">
+              <fieldset>
+                <legend>What service(s) interests you</legend>
+
+                  <div data-group="services" class="services-options">
+                    <label>
+                      <input type="checkbox" name="services" value="mobile-phlebotomy"/>
+                      Mobile Phlebotomy
+                    </label>
+                    <label>
+                      <input type="checkbox" name="services" value="biofeedback-scan"/>
+                      Biofeedback Scan
+                    </label>
+
+                    <label>
+                      <input type="checkbox" name="services" value="mind-body-harmony"/>
+                      Mind-Body Harmony
+                    </label>
+                  </div>
+
+              </fieldset>
+            </div>
+
+            <div class="form-field">
               <label for="message">Your Message</label>
               <textarea rows="5" name="message" required placeholder="Your Message"></textarea>
             </div>
@@ -119,6 +142,7 @@
   </footer>
 
   <script src="./index.js"></script>
+  <script src="./js/contact-form.js"></script>
 </body>
 
 </html>

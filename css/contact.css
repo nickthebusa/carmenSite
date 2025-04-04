@@ -40,6 +40,11 @@ fieldset {
   font-weight: 600;
 }
 
+.services-options {
+  display: flex;
+  flex-direction: column;
+}
+
 .map-embed {
   margin: 2rem 0;
 }

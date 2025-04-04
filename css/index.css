@@ -20,7 +20,9 @@ font-family: 'Adobe Garamond Pro', sans-serif;
 
   --bg-color: 204, 230, 230; /*#cce6e6*/
   --txt-color: 9, 10, 10; /*#090a0a*/
-  --footer-color: 62, 92, 92; /*#3e5c5c*/
+
+  /*--footer-color: 62, 92, 92; /*#3e5c5c*/
+  --footer-color: 9, 10, 10;
 
   --nav-txt-color: 65, 178, 184; /*#41b2b8*/
 
@@ -110,7 +112,7 @@ section p {
 .home.img-wrapper {
   height: auto;
   max-width: 800px;
-  margin: 0 3rem;
+  margin: 0;
 }
 .home.img-wrapper img {
   width: 100%;
@@ -163,6 +165,9 @@ footer .services {
 }
 
 @media (max-width: 500px) {
+  section {
+    margin: 1rem 2rem;
+  }
   section p {
     font-size: 1rem;
   }
