@@ -15,6 +15,10 @@
   <style>
     @import url('https://fonts.cdnfonts.com/css/adobe-garamond-pro-2');
   </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+  </style>
+
   <link href="./css/index.css" rel="stylesheet">
   <link href="./css/hamburger.css" rel="stylesheet">
   <link href="./css/services.css" rel="stylesheet">
@@ -32,9 +36,10 @@
       </div>
 
       <div class="links">
+        <a href="index.html">HOME</a>
         <a href="services.html">SERVICES</a>
         <a href="contact.html">CONTACT</a>
-        <a href="did_you_know.html">DID YOU KNOW</a>
+        <a href="resources.html">RESOURCES</a>
       </div>
 
       <hamburger>
@@ -43,9 +48,10 @@
         <span></span>
         <span></span>
         <div id="menu">
+          <a href="index.html">HOME</a>
           <a href="services.html">SERVICES</a>
           <a href="contact.html">CONTACT</a>
-          <a href="did_you_know.html">DID YOU KNOW</a>
+          <a href="resources.html">RESOURCES</a>
         </div>
       </hamburger>
 
@@ -61,11 +67,12 @@
       <div class="dropdown-div">
         <input type="checkbox" id="dropdown" class="dropdown" name="dropdown">
         <label for="dropdown" class="dropdown-label">
-            SELECT
-            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <polyline points="19 12 12 19 5 12"></polyline>
-            </svg>
+          SELECT
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <polyline points="19 12 12 19 5 12"></polyline>
+          </svg>
         </label>
         <div class="section-dropdown">
           <span data-value="mobile-phlebotomy">mobile phlebotomy</span>
@@ -74,16 +81,47 @@
         </div>
       </div>
 
-      <div class="service selected" id="mobile-phlebotomy">
+      <div class="pick-service-page">
+        <div class="pick-service-div" data-value="mobile-phlebotomy">
+          <div class="text">
+            <h3>MOBILE PHLEBOTOMY</h3>
+            <p>Professional blood draw services conveniently performed at your location.</p>
+          </div>
+          <img src="./pics/abstract_well_1.webp" alt="calming painting">
+        </div>
+        <div class="pick-service-div" data-value="biofeedback-body-scan">
+          <div class="text">
+            <h3>BIOFEEDBACK BODY SCAN</h3>
+            <p>Non-invasive assessment of your body's physiological responses and stress levels.</p>
+          </div>
+          <img src="./pics/abstract_well_2.webp" alt="calming painting">
+        </div>
+        <div class="pick-service-div" data-value="mind-body-harmony">
+          <div class="text">
+            <h3>MIND BODY HARMONY</h3>
+            <p>Holistic techniques to align your mental and physical well-being.</p>
+          </div>
+          <img src="./pics/abstract_well_3.webp" alt="calming painting">
+        </div>
+      </div>
+
+      <div class="service" id="mobile-phlebotomy">
         <h3>Mobile Phlebotomy</h3>
         <p>
-          Our Mobile Phlebotomy Services will draw your blood in the convenience of your own house.
-          With our one stop solution, you’ll save valuable time. Our integrated approach streamlines the
-          process. We handle everything from start to finish, once you have received your kit from the
-          laboratory. Prices vary according to the request from the lab. The cost is determined by the
-          scope of the services provided and can change accordingly. Travel distance and time also factor
-          into this.
+          Our Mobile Phlebotomy Services will draw your blood in the convenience of your own house or another
+          setting of your choice. With our one stop solution, you’ll save valuable time. Our integrated approach
+          streamlines the process. We handle everything from start to finish, once you have received your kit from the
+          laboratory or
+          practitioner. In addition, we can also draw samples directly in your physician’s office, which is convenient
+          for both the
+          patient and the doctor.
         </p>
+        <p>
+          We serve areas of Plymouth County, Bristol County, Providence County, and Barnstable County.
+          Prices vary according to the request from the lab. The cost is determined by the scope of the
+          services provided and can change accordingly. Travel distance and time also factor into this.
+        </p>
+
         <div class="services img-wrapper">
           <img src="./pics/mobile_phlebotomist_pic.webp" alt="mobile phlebotomist taking blood">
         </div>
@@ -91,14 +129,24 @@
       <div class="service" id="biofeedback-body-scan">
         <h3>Biofeeback Scan</h3>
         <p>
-          Biofeedback scan. Why do we offer this? We want you to feel good! Biofeedback devices let
-          your body choose what is impeding your health progress. The scan looks at toxic threats,
-          environment, food and stress to help determine what is threatening your well-being. You can
-          learn what is behind your symptoms and what you can do with your body to help get rid of it.
-          Once again we can bring the scan to you. It is done in the privacy of your own home. It is
-          conducted remotely. Once the scan is complete, you will receive a report of the findings and
-          then a holistic wellness plan is recommended. It may include diet suggestions, supplements and
-          lifestyle changes.
+          What is your vibe? How is your energy affecting you? Get a Biofeedback scan to find out. Why do we offer this?
+          We want you to feel good! Biofeedback devices tell you what your body wants and what may be impeding your
+          health progress. The scan can looks a toxic threats,
+          environmental effects, food and stress to help determine what is threatening your well-being.You can learn
+          what is behind your symptoms and what you can do with your body to help get rid of it. Once the scan is
+          complete, you will receive a report of the findings and then a holistic wellness plan is recommended.
+        </p>
+        <p>
+          The underlying principle behind Biofeedback testing is energy. We are all made of energy and have our own
+          unique energy; our own frequencies that we vibe at. These frequencies can be measured and compared to known
+          healthy and unhealthy frequencies. Biofeedback can look at frequency differences and provide a comprehensive
+          overview of information. Its goal is to bring balance and harmony to the body as a whole system. The
+          biofeedback analysis results will assist you in creating a plan that aligns with your energy and may include
+          food recommendations, lifestyle changes and supplement suggestions. This personalized program ensures your
+          personalized treatment program vibes with you so you can feel your best.
+        </p>
+        <p>
+          This does not treat, cure, or diagnose any disease or illness. It is for education purposes only.
         </p>
         <div class="services img-wrapper">
           <img src="./pics/biofeedback_testing_machine.webp" alt="biofeedback testing machine">
@@ -107,9 +155,9 @@
       <div class="service" id="mind-body-harmony">
         <h3>Mind Body Harmony</h3>
         <p>
-          What is mind-body harmony? Align your physical health with your physical space. Make your
-          home your oasis. Free your mind and harmonize your physical space to your emotional well
-          being. This starts in your home. Do you want to move through the space in your home with
+          What is Mind-Body Harmony? Harmonize your physical health with your physical space. Make your home your oasis.
+          Free your mind and harmonize your physical space to your emotional well being. This starts in your home. Do
+          you want to move through the space in your home with
           ease, locate items promptly when you need them, have more space, and not feel cluttered.
           Statistics show that we spend billions on replacing items that we have lost. Your home is a place
           that you want to come home to and unwind from work and all the other stresses from the
@@ -127,13 +175,12 @@
   <footer>
     <h3>Carmen Sylvester Mobile Phlebotomist</h3>
     <span class="services">
-        <span>Mobile Blood Draws</span>
-        <span class="separator">•</span>
-        <span>In-Home Services</span>
-        <span class="separator">•</span>
-        <span>Specialty Lab Kits</span>
+      <span>Mobile Blood Draws</span>
+      <span class="separator">•</span>
+      <span>In-Home Services</span>
+      <span class="separator">•</span>
+      <span>Specialty Lab Kits</span>
     </span>
-    <span>508-737-4905</span>
     <span>carmen.naturalhealth@gmail.com</span>
     <div class="img-wrapper">
       <img src="./pics/mp_logo.webp" alt="logo">
