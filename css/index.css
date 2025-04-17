@@ -59,6 +59,12 @@ main {
   align-items: center;
   position: relative;
 }
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 section p {
   font-size: 1.1rem;
   font-weight: 500;
@@ -98,7 +104,25 @@ section p {
   align-self: center;
   margin: 0.7rem 2rem 0 2rem;
 }
-
+.group-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-card {
+  display: inline-flex;
+  background-color: rgba(var(--mintcream),1);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin: 1rem 2rem;
+  box-sizing: border-box;
+  max-width: 60rem;
+}
+.flex-card p {
+  margin: 0;
+}
 
 
 
@@ -218,19 +242,17 @@ section.intro.home {
   height: 100%;
   object-fit: cover;
   object-position: top;
-  /*
   mask-image: linear-gradient(
     to bottom, 
     white,           
     white 70%,       
     transparent      
   );
-  */
 }
 .card.one {
   grid-column: 1 / 12;
 }
-.card.one p {
+.card p {
   font-size: 1.3rem;
 }
 .img-overlay.one {
@@ -244,22 +266,99 @@ section.intro.home {
 
 /* MOBILE PHLEBOTOMY */
 section.mobile-phlebotomy.home {
-  max-width: 1300px;
+  position: relative;
+  margin: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-phlebotomy-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -5;
+  overflow: hidden;
+  opacity: 0.7;
+  background-image: url('../pics/needles_bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  mask-image: linear-gradient(
+    to top, 
+    white,           
+    white 90%,       
+    transparent      
+  );
 }
 .card.two {
   z-index: 1;
-  grid-column: 10 / 18;
+  grid-column: 10 / -1;
   align-self: stretch;
   border-radius: 0 5px 5px 0;
+  max-width: 450px;
 }
 .img-overlay.two {
-  height: 250px;
-  grid-column: 1 / 10;
+  grid-column: 1 / 11;
 }
 .img-overlay.two img {
-  height: 250px;
   border-radius: 5px 0 0 5px;
-  max-width: 400px;
+  max-width: 450px;
+}
+
+/* LOGO CAROUSEL */
+.logo-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.carousel-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+.carousel-item img {
+  width: 150px;
+  height: auto;
+  margin: 0 0.7rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.carousel-nxt, .carousel-prev {
+  font-size: 2rem;
+  opacity: 0.6;
+}
+.carousel-nxt:hover, .carousel-prev:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* WELLNESS */
+
+
+.contact-btn {
+  background-color: rgba(var(--nav-txt-color), 1);
+  color: rgba(var(--mintcream), 1);
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  margin: 1rem 0 2rem 0;
+}
+.contact-btn:hover {
+  background-color: rgba(var(--mintcream), 1);
+  color: rgba(var(--nav-txt-color), 1);
+  cursor: pointer;
+}
+.contact-btn p {
+  font-weight: 900;
+}
+.contact-btn a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* change intro layout */
@@ -282,8 +381,9 @@ section.mobile-phlebotomy.home {
   .overlap-layout .img-overlay {
     width: 100%;
     margin: 0;
-    float: none;
     height: auto;
+    display: flex;
+    justify-content: center;
   }
   .overlap-layout .img-overlay img {
     width: 100%;
@@ -292,7 +392,6 @@ section.mobile-phlebotomy.home {
     object-fit: contain;
     object-position: center;
   }
-
   .overlap-layout.two {
     flex-direction: row;
   }
@@ -317,13 +416,16 @@ section.mobile-phlebotomy.home {
   section p {
     font-size: 1rem;
   }
-  .card.one p {
+  section .card p {
     font-size: 1rem;
   }
   .overlap-layout {
     margin: 0.7rem 0.5rem 0 0.5rem;
   }
-
+  .flex-card {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
 }
 
 @media (max-width: 400px) {
