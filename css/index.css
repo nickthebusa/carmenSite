@@ -331,7 +331,8 @@ section.mobile-phlebotomy.home {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  mask-image: /*same as -webkit-mask-image*/ linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  /*mask-image:  linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  */
 }
 .carousel-items > * {
   scroll-snap-align: start;
