@@ -109,6 +109,7 @@ section p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .flex-card {
   display: inline-flex;
@@ -310,14 +311,33 @@ section.mobile-phlebotomy.home {
 
 /* LOGO CAROUSEL */
 .logo-carousel {
-  display: none;
+  display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  overflow-x: auto;
   padding: 1rem;
   margin: 0.5rem;
-  overflow-x: hidden;
+  max-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.carousel-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  mask-image: /*same as -webkit-mask-image*/ linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+.carousel-items > * {
+  scroll-snap-align: start;
+}
+.carousel-items::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
 }
 .carousel-item:hover {
   transform: scale(1.05);
@@ -330,13 +350,17 @@ section.mobile-phlebotomy.home {
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-.carousel-nxt, .carousel-prev {
+.carousel-next, .carousel-prev {
   font-size: 2rem;
   opacity: 0.6;
 }
-.carousel-nxt:hover, .carousel-prev:hover {
+.carousel-next:hover, .carousel-prev:hover {
   opacity: 1;
   cursor: pointer;
+}
+.carousel-next:disabled, .carousel-prev:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 /* WELLNESS */
