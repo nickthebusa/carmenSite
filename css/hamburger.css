@@ -16,7 +16,7 @@ hamburger input {
   display: block;
   cursor: pointer;
   opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  z-index: 3; /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 hamburger span {
@@ -58,7 +58,7 @@ hamburger #menu {
   -webkit-font-smoothing: antialiased;
   background-color: rgba(var(--mintcream), 1);
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 3;
   top: 100%;
   left: 0;
   opacity: 0;

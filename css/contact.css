@@ -1,9 +1,22 @@
+.group-div {
+  max-width: 1000px;
+  width: calc(100% - 4rem);
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
 .contact-form-div {
   background-color: rgba(var(--mintcream), 1);
   border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 #contact-form {
   padding: 1rem;
+  box-sizing: border-box;
 }
 fieldset {
   display: flex;
@@ -46,11 +59,22 @@ fieldset {
 }
 
 .map-embed {
-  margin: 2rem 0;
+  width: 100%;
+  margin: 2rem 0 0 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .map-embed iframe {
   border: none;
   width: 100%;
+}
+.flex-card.serving-areas {
+  margin: 0 0 3rem 0;
+  border-radius: 0 0 5px 5px;
+  max-width: none;
+  width: 100%;
+}
+.flex-card.serving-areas p {
+ font-size: 1rem;
 }
 
 /* loader screen */
@@ -92,4 +116,10 @@ fieldset {
 @keyframes l3-1 {
   0%,2% {bottom: 0%}
   98%,to {bottom:.1%}
+}
+
+@media (max-width: 500px) {
+  .group-div {
+    width: calc(100% - 1rem);
+  }
 }
