@@ -8,7 +8,7 @@ h2 {
 }
 
 .contact-form-div {
-  background-color: rgba(var(--mintcream), 1);
+  background-color: rgba(var(--card-bg-color), 1);
   border-radius: 5px;
   box-sizing: border-box;
   width: 100%;
@@ -22,7 +22,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  border: 1px solid rgba(var(--nav-txt-color), 1);
+  border: 1px solid rgba(var(--txt-color), 1);
 }
 .form-field {
   display: flex;
@@ -36,7 +36,7 @@ fieldset {
   font-size: 1rem;
   font-family: inherit;
   padding: 0.5rem;
-  border: 1px solid rgba(var(--nav-txt-color), 1);
+  border: 1px solid rgba(var(--txt-color), 1);
   border-radius: 5px;
 }
 #contact-form button {
@@ -45,7 +45,7 @@ fieldset {
 }
 #contact-form button:hover {
   background-color: rgba(var(--nav-txt-color), 1);
-  color: rgba(var(--mintcream), 1);
+  color: rgba(var(--bg-color), 1);
 }
 
 #result {
