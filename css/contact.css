@@ -42,6 +42,8 @@ fieldset {
 #contact-form button {
   margin: 1rem 0;
   cursor: pointer;
+  background-color: rgba(var(--footer-color), 0.8);
+  color: rgba(var(--bg-color), 1)
 }
 #contact-form button:hover {
   background-color: rgba(var(--nav-txt-color), 1);
@@ -110,6 +112,12 @@ fieldset {
   background: #CF4647;
   animation: l3-1 .75s cubic-bezier(0,900,1,900) infinite;
 }
+
+section.contact .flex-card {
+  background-color: rgba(var(--bg-color), 1);
+  box-shadow: none;
+}
+
 @keyframes l3-0 {
   to {background-position: -125% 100%}
 }

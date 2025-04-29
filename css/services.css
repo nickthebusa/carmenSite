@@ -279,24 +279,16 @@ section p {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 10px;
 }
-.article-div {
-  margin: 0.5rem 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
+.card.articles li {
+  list-style: square;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
-.article-div p {
-  margin: 0 1rem;
-  font-size: 1.2rem;
-  text-align: left;
-}
-.article-img {
-  width: 200px;
-  height: auto;
-}
+
 
 #mind-body-harmony .card{
   margin: 0 0 1rem 0;
