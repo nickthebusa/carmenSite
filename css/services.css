@@ -1,6 +1,8 @@
-
 .service-page {
   margin: 0 0 5rem 0;
+}
+.pick-service-page {
+  width: 100%;
 }
 
 .dropdown-div {
@@ -9,8 +11,7 @@
   text-align: left;
   z-index: 2;
   box-sizing: border-box;
-  width: calc(100% - 4rem);
-  max-width: 1000px;
+  width: 100%;
 }
 .dropdown-div [type="checkbox"]:checked,
 .dropdown-div [type="checkbox"]:not(:checked){
@@ -78,7 +79,7 @@
   position: absolute;
   padding: 5px;
   background-color: rgba(var(--bg-color), 1);
-  top: 70px;
+  top: 60px;
   left: 0;
   width: 100%;
   border-radius: 4px;
@@ -88,7 +89,8 @@
   pointer-events: none;
   transform: translateY(20px);
   transition: all 200ms linear;
-  border: 2px solid rgba(var(--nav-txt-color), 0.5);
+  border: 2px solid rgba(var(--nav-txt-color), 1);
+  box-sizing: border-box;
 }
 .section-dropdown:before {
   position: absolute;
@@ -102,16 +104,15 @@
 }
 .section-dropdown:after {
   position: absolute;
-  top: -7px;
+  top: -8px;
   left: 30px;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid rgba(var(--bg-color), 1);
+  border-bottom: 8px solid rgba(var(--nav-txt-color), 1);
   content: '';
   display: block;
-  z-index: 2;
   transition: all 200ms linear;
 }
 .dropdown:checked ~ .section-dropdown{
@@ -124,7 +125,7 @@
   color: rgba();
   transition: all 200ms linear;
   border-radius: 2px;
-  padding: 5px 0;
+  padding: 1rem 0;
   padding-left: 20px;
   padding-right: 15px;
   margin: 2px 0;
@@ -155,12 +156,11 @@
 .service.selected {
   display: flex;
   margin: 0;
-  max-width: 1000px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: calc(100% - 4rem);
+  width: 100%;
 }
 .service h3 {
   margin: 1rem 0 0.3rem 0;
@@ -183,7 +183,7 @@
   text-align: left;
 }
 .pick-service-div:hover {
-  outline: 2px solid rgba(var(--bg-color), 1);
+  outline: 2px solid rgba(var(--nav-txt-color), 1);
   cursor: pointer;
 }
 .pick-service-div:hover img {
@@ -196,17 +196,18 @@
 .pick-service-div h3 {
   margin: 0.5rem 0;
 }
-
-.pick-service-div img {
-  position: absolute;
-  object-fit: cover;
+.pick-service-div .bg-img {
   top: 0;
+  left: 0;
   z-index: -2;
+  position: absolute;
+  width: 100%;
 }
-
-.pick-service-page {
-  width: calc(100% - 4rem);
-  max-width: 1000px;
+.pick-service-div img {
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+  filter: grayscale(50%);
 }
 
 section p {
@@ -288,24 +289,43 @@ section p {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
-
+.buy-book {
+  width: 100%;
+  box-sizing: border-box;
+}
+.buy-book a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 10px;
+  padding: 0.2rem;
+}
+.buy-book a:hover {
+  outline: 1px dotted rgba(var(--nav-txt-color));
+}
+.buy-book a p {
+  font-size: 1.3rem;
+  margin: 0 0 0 1.5rem;
+  max-width: 30rem;
+  flex: 1;
+  min-width: 0;
+}
+.buy-book a .img-wrapper {
+  width: 5rem;
+  flex-shrink: 0;
+}
 
 #mind-body-harmony .card{
   margin: 0 0 1rem 0;
 }
 
 @media (max-width: 500px) {
-  .pick-service-page {
-    width: calc(100% - 1rem);
-  }
   .service-page {
     margin: 0 0 2rem 0;
   }
   .pick-service-div .text {
     margin: 0 1rem;
-  }
-  .service.selected {
-    width: calc(100% - 1rem);
   }
   .service.selected .lab-kits {
     font-size: 1rem;
@@ -315,5 +335,8 @@ section p {
   }
   .row-wrap-div .services.img-wrapper{
     width: 100%;
+  }
+  .buy-book a p {
+   font-size: 1.1rem;
   }
 }
