@@ -181,6 +181,7 @@ section li {
 .row-wrap-div .img-wrapper img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 
@@ -357,6 +358,7 @@ section.mobile-phlebotomy.home h3 {
 }
 section.mobile-phlebotomy.home .lab-kits h3 {
   text-align: center;
+  margin-top: 0.4rem;
 }
 section.mobile-phlebotomy.home .lab-kits {
   background-color: rgba(var(--card-bg-color), 1);
@@ -479,6 +481,7 @@ section.wellness.home h3 {
   background-color: rgba(var(--bg-color), 1);
   color: rgba(var(--nav-txt-color), 1);
   cursor: pointer;
+  outline: 3px solid rgba(var(--nav-txt-color), 1);
 }
 .contact-btn p {
   font-weight: 900;

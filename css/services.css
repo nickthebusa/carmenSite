@@ -217,11 +217,14 @@ section p {
 .services.img-wrapper {
   margin: 1rem 0;
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .services.img-wrapper img {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.services.img-wrapper.centered {
+  display: flex;
   width: 100%;
-  height: 100%;
+  max-width: 500px;
 }
 
 .service.selected .lab-kits {
@@ -238,21 +241,6 @@ section p {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* biofeedback */
-.row-wrap-div .services.img-wrapper {
-  width: 50%;
-}
-.services.img-wrapper {
-  box-shadow: none;
-}
-.row-wrap-div .services.img-wrapper img {
-  object-fit: cover;
-  object-position: center;
-}
-.services.img-wrapper img {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 
@@ -307,14 +295,157 @@ section p {
   flex-shrink: 0;
 }
 
+#biofeedback-body-scan .card,
 #mind-body-harmony .card{
   margin: 0 0 1rem 0;
 }
 
-.show-mobile {
-  display: none;
+
+.text-div.history-of-rifing {
+  position: relative;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+.txt-bg-img {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.7;
+}
+.txt-bg-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(25%);
+}
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  background: rgba(255, 255, 255, 0.2); /* Optional: Light tint */
+  z-index: -1; /* Above image, below text */
 }
 
+.banner.rife-specialist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(45deg, rgba(218, 179, 197, 1.000) 0.000%, rgba(218, 179, 197, 1.000) 14.286%, rgba(189, 170, 188, 1.000) 14.286%, rgba(189, 170, 188, 1.000) 28.571%, rgba(154, 157, 175, 1.000) 28.571%, rgba(154, 157, 175, 1.000) 42.857%, rgba(121, 141, 157, 1.000) 42.857%, rgba(121, 141, 157, 1.000) 57.143%, rgba(95, 122, 137, 1.000) 57.143%, rgba(95, 122, 137, 1.000) 71.429%, rgba(81, 101, 116, 1.000) 71.429%, rgba(81, 101, 116, 1.000) 85.714%, rgba(81, 79, 95, 1.000) 85.714% 100.000%);
+}
+.banner.rife-specialist h3 {
+  text-align: center;
+  color: rgba(var(--bg-color), 1);
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.overlap-layout.three {
+  margin: 0 0 1rem 0;
+}
+.card.three {
+  grid-column: 9 / -1;
+}
+
+#biofeedback-body-scan .card.three,
+#mind-body-harmony .card.three {
+  margin: 0;
+}
+.img-overlay.three {
+  grid-column: 1 / 12;
+  justify-content: flex-end;
+  height: 400px;
+}
+.img-overlay.three img {
+  width: 100%;
+}
+
+.img-gallery-div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+.img-gallery-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(193, 209, 204, 1.000) 0.000%, rgba(223, 180, 175, 1.000) 16.667%, rgba(244, 160, 154, 1.000) 33.333%, rgba(249, 157, 149, 1.000) 50.000%, rgba(235, 171, 162, 1.000) 66.667%, rgba(208, 198, 188, 1.000) 83.333%, rgba(179, 225, 217, 1.000) 100.000%);
+  opacity: 0.5;
+  z-index: -2;
+  border-radius: 10px;
+}
+.img-gallery-div .img-wrapper {
+  width: 400px;
+  height: 100%;
+  padding: 0.2rem;
+  box-sizing: border-box;
+}
+.img-gallery-div .img-wrapper:hover {
+  box-sizing: border-box;
+  border: 2px dotted;
+}
+.img-gallery-div .img-wrapper img {
+  height: auto;
+}
+.img-gallery-div .img-wrapper a {
+  display: block;
+  line-height: 0;
+}
+.img-txt-div {
+  align-self: start;
+}
+.img-txt-div .img-wrapper{
+  max-width: 400px;
+}
+
+@media (max-width: 1000px) {
+  .overlap-layout.three {
+    flex-direction: row;
+  }
+  .img-overlay.three {
+    width: 100%;
+    height: 300px;
+  }
+  .img-overlay.three img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+  }
+  .card.three {
+    align-self: stretch;
+    border-radius: 0 5px 5px 0;
+  }
+}
+@media (max-width: 600px) {
+  .overlap-layout.three {
+    flex-direction: column;
+  }
+  .img-overlay.three img {
+    border-radius: 5px 5px 0 0;
+  }
+  .card.three {
+    border-radius: 0 0 5px 5px;
+  }
+}
 @media (max-width: 500px) {
   .service-page {
     margin: 0 0 2rem 0;
@@ -325,16 +456,7 @@ section p {
   .service.selected .lab-kits {
     font-size: 1rem;
   }
-  .row-wrap-div .img-wrapper:last-of-type {
-    display: none;
-  }
-  .row-wrap-div .services.img-wrapper{
-    width: 100%;
-  }
   .buy-book a p {
    font-size: 1.1rem;
-  }
-  .show-mobile {
-    display: flex;
   }
 }
