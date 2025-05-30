@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.querySelector('.carousel-prev');
   const nextBtn = document.querySelector('.carousel-next');
 
-  console.log('Carousel initialized:', carouselItems, prevBtn, nextBtn);
-
   prevBtn.addEventListener('click', () => {
     const itemWidth = carouselItems.querySelector('*').clientWidth;
     carouselItems.scrollBy({
